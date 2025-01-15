@@ -272,14 +272,14 @@ class CustomAuthenticationForm(AuthenticationForm):
     remember_me = forms.BooleanField(required=False, label='Remember Me')
     
 
-class PromotieForm(forms.ModelForm):
-    categorii = forms.ModelMultipleChoiceField(
-        queryset=Bilet.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
-        required=True,
-        label='Bilete'
-    )
+# class PromotieForm(forms.ModelForm):
+#     categorii = forms.ModelMultipleChoiceField(
+#         queryset=Bilet.objects.all(),
+#         widget=forms.CheckboxSelectMultiple,
+#         required=True,
+#         label='Bilete'
+#     )
 
-    class Meta:
-        model = Promotie
-        fields = ['nume', 'data_expirare', 'subiect', 'mesaj', 'categorii']
+#     class Meta:
+#         model = Promotie
+#         fields = ['nume', 'data_expirare', 'subiect', 'mesaj', 'categorii']

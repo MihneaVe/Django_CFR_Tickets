@@ -143,3 +143,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'test.tweb.node@gmail.com'
 EMAIL_HOST_PASSWORD = 'xdqswyrleddghrgm'
 DEFAULT_FROM_EMAIL = 'Da-Boss <test.tweb.node@gmail.com>'
+
+ADMINS = [
+    ('mihnea', 'mihneave2004@gmail.com'),
+    ('andrei', 'mihnea-andrei.velcea@asmi.ro'),
+]

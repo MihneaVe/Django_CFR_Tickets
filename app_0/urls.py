@@ -16,7 +16,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('change-password/', views.change_password, name='change_password'),
     path('confirma_mail/<str:cod>/', views.confirma_mail, name='confirma_mail'),
-    path('promotii/', views.promotii, name='promotii'),
-    path('promotii/success/', views.promotii_success, name='promotii_success'),
+    # path('promotii/', views.promotii, name='promotii'),
+    # path('promotii/success/', views.promotii_success, name='promotii_success'),
     path('bilet/<int:bilet_id>/', views.bilet_detail, name='bilet_detail'),
 ]

@@ -1,15 +1,17 @@
+from datetime import timedelta
 from pyexpat.errors import messages
 from django.core.paginator import Paginator
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from .models import Bilet, CustomUser, Vizualizare
-from .forms import BiletFilterForm, BiletForm, ContactForm, CustomUserCreationForm, CustomAuthenticationForm, PromotieForm
+from .forms import BiletFilterForm, BiletForm, ContactForm, CustomUserCreationForm, CustomAuthenticationForm
 from django.template.loader import render_to_string
 from django.contrib.auth import login, authenticate, logout,update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
-from django.core.mail import send_mass_mail
+from django.core.mail import send_mass_mail, mail_admins
 from app_0 import models
+from django.utils import timezone
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -100,9 +102,29 @@ def register(request):
 
 # LAB 6 TASK 3
 
+login_attempts = {}
+
 def custom_login(request):
     if request.method == 'POST':
         form = CustomAuthenticationForm(request, data=request.POST)
+        username = request.POST.get('username')
+        ip_address = request.META.get('REMOTE_ADDR')
+
+        # Track login attempts
+        if username not in login_attempts:
+            login_attempts[username] = []
+        login_attempts[username].append(timezone.now())
+
+        # Remove attempts older than 2 minutes
+        login_attempts[username] = [attempt for attempt in login_attempts[username] if attempt > timezone.now() - timedelta(minutes=2)]
+
+        if len(login_attempts[username]) > 3:
+            subject = "Logari suspecte"
+            message = f"Username: {username}\nIP Address: {ip_address}"
+            html_message = f"<h1 style='color:red;'>Logari suspecte</h1><p>Username: {username}</p><p>IP Address: {ip_address}</p>"
+            mail_admins(subject, message, html_message=html_message)
+            login_attempts[username] = []  # Reset attempts after sending email
+
         if form.is_valid():
             user = form.get_user()
             if not user.email_confirmat:
@@ -153,34 +175,34 @@ def adauga_vizualizare(user, produs):
         vizualizari.last().delete()
     Vizualizare.objects.create(user=user, produs=produs)
 
-def promotii(request):
-    if request.method == 'POST':
-        form = PromotieForm(request.POST)
-        if form.is_valid():
-            promotie = form.save()
-            bilete = form.cleaned_data['categorii']
-            k = 3  # Minimum number of views to qualify for promotion
-            messages = []
-            for bilet in bilete:
-                users = CustomUser.objects.filter(
-                    vizualizare__produs=bilet
-                ).annotate(num_vizualizari=models.Count('vizualizare')).filter(num_vizualizari__gte=k).distinct()
-                for user in users:
-                    context = {
-                        'subiect': promotie.subiect,
-                        'data_expirare': promotie.data_expirare,
-                        'mesaj': promotie.mesaj,
-                    }
-                    html_message = render_to_string('app_0/email_promo.html', context)
-                    messages.append((promotie.subiect, html_message, 'Da-Boss <test.tweb.node@gmail.com>', [user.email]))
-            send_mass_mail(messages)
-            return redirect('promotii_success')
-    else:
-        form = PromotieForm()
-    return render(request, 'app_0/promotii.html', {'form': form})
+# def promotii(request):
+#     if request.method == 'POST':
+#         form = PromotieForm(request.POST)
+#         if form.is_valid():
+#             promotie = form.save()
+#             bilete = form.cleaned_data['categorii']
+#             k = 3  # Minimum number of views to qualify for promotion
+#             messages = []
+#             for bilet in bilete:
+#                 users = CustomUser.objects.filter(
+#                     vizualizare__produs=bilet
+#                 ).annotate(num_vizualizari=models.Count('vizualizare')).filter(num_vizualizari__gte=k).distinct()
+#                 for user in users:
+#                     context = {
+#                         'subiect': promotie.subiect,
+#                         'data_expirare': promotie.data_expirare,
+#                         'mesaj': promotie.mesaj,
+#                     }
+#                     html_message = render_to_string('app_0/email_promo.html', context)
+#                     messages.append((promotie.subiect, html_message, 'Da-Boss <test.tweb.node@gmail.com>', [user.email]))
+#             send_mass_mail(messages)
+#             return redirect('promotii_success')
+#     else:
+#         form = PromotieForm()
+#     return render(request, 'app_0/promotii.html', {'form': form})
 
-def promotii_success(request):
-    return render(request, 'app_0/promotii_success.html')
+# def promotii_success(request):
+#     return render(request, 'app_0/promotii_success.html')
 
 def bilet_detail(request, bilet_id):
     bilet = get_object_or_404(Bilet, id=bilet_id)
