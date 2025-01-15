@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Bilete</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('filter-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const queryString = new URLSearchParams(formData).toString();
+                fetch(`?${queryString}`, {
+                    headers: {
+                        'x-requested-with': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('bilete-list').innerHTML = data.html;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Lista Bilete</h1>
+
+    <!-- Filter form -->
+    <form id="filter-form" method="get">
+        {{ form.as_p }}
+        <button type="submit">Filtreaza</button>
+    </form>
+
+    <!-- Bilete list -->
+    <div id="bilete-list">
+        {% include 'app_0/bilete_list.html' %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promotii</title>
+</head>
+<body>
+    <h1>Creare Promotie</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Creeaza Promotie</button>
+    </form>
+</body>
+</html>

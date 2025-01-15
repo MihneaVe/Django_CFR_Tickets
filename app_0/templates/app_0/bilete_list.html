@@ -1,0 +1,31 @@
+<ul>
+    {% for bilet in page_obj.object_list %}
+    <li>
+        <p><strong>Loc:</strong> {{ bilet.loc }}</p>
+        <p><strong>Vagon:</strong> {{ bilet.vagon.tip }}</p>
+        <p><strong>Tren:</strong> {{ bilet.cursa.tren.nume }}</p>
+        <p><strong>Data Plecare:</strong> {{ bilet.cursa.data_plecare }}</p>
+        <p><strong>Data Sosire:</strong> {{ bilet.cursa.data_sosire }}</p>
+        <p><strong>Destinatie:</strong> {{ bilet.cursa.ruta.statii.last.oras }}</p>
+        <p><strong>Pret:</strong> {{ bilet.pret }} RON</p>
+        <a href="{% url 'bilet_detail' bilet.id %}">Vezi detalii</a>
+        <form method="post" action="{% url 'cumpara_bilet' bilet.id %}">
+            {% csrf_token %}
+            <button type="submit">Cumpara</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- Pagination -->
+<div>
+    <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+    <div>
+        {% if page_obj.has_previous %}
+        <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <a href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+    </div>
+</div>

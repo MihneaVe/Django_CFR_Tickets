@@ -1,0 +1,11 @@
+{
+    "nume": "Velcea",
+    "prenume": "Mihnea Andrei",
+    "data_nasterii": "2004-12-23",
+    "email": "mihneave2004@gmail.com",
+    "tip_mesaj": "cerere",
+    "subiect": "Ceva",
+    "minim_zile_asteptare": 2,
+    "mesaj": "Ceva de genul pare a fi corect Velcea",
+    "varsta": "19 ani si 0 luni"
+}

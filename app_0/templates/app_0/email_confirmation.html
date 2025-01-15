@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm your email address</title>
+</head>
+<body>
+    <h1>Welcome to our site, {{ user.first_name }} {{ user.last_name }}!</h1>
+    <p>Thank you for registering on our site. Please confirm your email address by clicking the link below:</p>
+    <p><a href="{{ confirmation_url }}">Confirm your email address</a></p>
+    <p>Username: {{ user.username }}</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQdMXxidzH4IrWkD0s8-b3EeOy92mX84dQvg&s" alt="Site Logo">
+</body>
+</html>

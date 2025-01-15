@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalii Bilet</title>
+</head>
+<body>
+    <h1>Detalii Bilet</h1>
+    <p><strong>Loc:</strong> {{ bilet.loc }}</p>
+    <p><strong>Vagon:</strong> {{ bilet.vagon.tip }}</p>
+    <p><strong>Tren:</strong> {{ bilet.cursa.tren.nume }}</p>
+    <p><strong>Data Plecare:</strong> {{ bilet.cursa.data_plecare }}</p>
+    <p><strong>Data Sosire:</strong> {{ bilet.cursa.data_sosire }}</p>
+    <p><strong>Destinatie:</strong> {{ bilet.cursa.ruta.statii.last.oras }}</p>
+    <p><strong>Pret:</strong> {{ bilet.pret }} RON</p>
+    <form method="post" action="{% url 'cumpara_bilet' bilet.id %}">
+        {% csrf_token %}
+        <button type="submit">Cumpara</button>
+    </form>
+</body>
+</html>

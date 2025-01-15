@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <style>
+        .profile-picture {
+            width: 5vw; /* 5% of the viewport width */
+            height: 5vw; /* 5% of the viewport width to make it a square */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+            border-radius: 50%; /* Make it a circle */
+        }
+    </style>
+</head>
+<body>
+    <h1>Profile</h1>
+    <p>Username: {{ request.user.username }}</p>
+    <p>Email: {{ request.user.email }}</p>
+    <p>Phone Number: {{ request.user.phone_number }}</p>
+    <p>Address: {{ request.user.address }}</p>
+    <p>Birth Date: {{ request.user.birth_date }}</p>
+    <p>Bio: {{ request.user.bio }}</p>
+    {% if request.user.profile_picture %}
+        <p><img src="{{ request.user.profile_picture.url }}" alt="Profile Picture" class="profile-picture"></p>
+    {% else %}
+        <p>No profile picture available.</p>
+    {% endif %}
+    <a href="{% url 'change_password' %}">Change Password</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
