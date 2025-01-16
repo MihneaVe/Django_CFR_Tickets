@@ -14,6 +14,8 @@ from django.core.mail import send_mass_mail, mail_admins
 from app_0 import models
 from django.utils import timezone
 from django.core.exceptions import PermissionDenied
+from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.models import Permission
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -76,15 +78,23 @@ def contact_success(request):
 
 
 
+@permission_required('app_0.add_bilet', raise_exception=True)
 def adauga_bilet(request):
-    if request.method == 'POST':
-        form = BiletForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('adauga_bilet_success')
-    else:
-        form = BiletForm()
-    return render(request, 'app_0/adauga_bilet.html', {'form': form})
+    try:
+        if request.method == 'POST':
+            form = BiletForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('adauga_bilet_success')
+        else:
+            form = BiletForm()
+        return render(request, 'app_0/adauga_bilet.html', {'form': form})
+    except PermissionDenied:
+        context = {
+            'titlu': 'Eroare adaugare produse',
+            'mesaj_personalizat': 'Nu ai voie să adaugi bilete'
+        }
+        return render(request, 'app_0/403.html', context, status=403)
 
 def adauga_bilet_success(request):
     return render(request, 'app_0/adauga_bilet_success.html')
@@ -162,6 +172,7 @@ def custom_login(request):
 
 @login_required
 def custom_logout(request):
+    request.user.user_permissions.remove(Permission.objects.get(codename='vizualizeaza_oferta'))
     logout(request)
     return redirect('login')
 
@@ -261,7 +272,30 @@ def custom_403_view(request, exception):
         'titlu': 'Acces Interzis',
         'mesaj_personalizat': str(exception)
     }
-    return render(request, '403.html', context)
+    return render(request, 'app_0/403.html', context)
 
 def test_403(request):
     raise PermissionDenied("You do not have permission to access this resource.")
+
+@login_required
+def assign_offer_permission(request):
+    if request.method == "POST":
+        try:
+            permission = Permission.objects.get(codename='vizualizeaza_oferta')
+            request.user.user_permissions.add(permission)
+            return JsonResponse({"status": "success"})
+        except Permission.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "Permission does not exist"}, status=400)
+    return JsonResponse({"status": "error", "message": "Invalid request method"}, status=400)
+
+from django.http import HttpResponseForbidden
+
+@login_required
+def oferta(request):
+    if not request.user.has_perm('app_0.vizualizeaza_oferta'):
+        context = {
+            'titlu': 'Eroare afisare oferta',
+            'mesaj_personalizat': 'Nu ai voie să vizualizezi oferta'
+        }
+        return render(request, 'app_0/403.html', context, status=403)
+    return render(request, 'app_0/oferta.html')

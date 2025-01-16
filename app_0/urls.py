@@ -21,4 +21,6 @@ urlpatterns = [
     path('bilet/<int:bilet_id>/', views.bilet_detail, name='bilet_detail'),
     path('recent_purchases/', views.recent_purchases, name='recent_purchases'),
     path('test_403/', views.test_403, name='test_403'),
+    path('assign_offer_permission/', views.assign_offer_permission, name='assign_offer_permission'),
+    path('oferta/', views.oferta, name='oferta'),
 ]

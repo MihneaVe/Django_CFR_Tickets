@@ -320,3 +320,785 @@ Traceback (most recent call last):
     raise PermissionDenied("You do not have permission to access this resource.")
 django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
 ERROR 2025-01-16 02:32:04,075 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+INFO 2025-01-16 03:52:47,353 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-16 03:52:51,736 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 03:52:51,737 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 03:55:06,315 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 03:55:06,317 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+INFO 2025-01-16 03:55:29,247 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 03:55:29,739 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 03:55:31,009 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+INFO 2025-01-16 03:55:31,011 basehttp "GET /index/test_403/ HTTP/1.1" 200 222
+WARNING 2025-01-16 03:56:07,872 log Not Found: /index/profil
+WARNING 2025-01-16 03:56:07,873 basehttp "GET /index/profil HTTP/1.1" 404 6756
+INFO 2025-01-16 03:56:10,777 basehttp "GET /index/profile HTTP/1.1" 301 0
+INFO 2025-01-16 03:56:10,843 basehttp "GET /index/profile/ HTTP/1.1" 200 791
+INFO 2025-01-16 03:56:12,100 basehttp "GET /index/logout/ HTTP/1.1" 302 0
+INFO 2025-01-16 03:56:12,114 basehttp "GET /index/login/ HTTP/1.1" 200 865
+INFO 2025-01-16 03:56:17,470 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+INFO 2025-01-16 03:56:17,471 basehttp "GET /index/test_403/ HTTP/1.1" 200 235
+INFO 2025-01-16 03:57:56,465 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\admin.py changed, reloading.
+INFO 2025-01-16 03:57:56,924 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 03:58:57,203 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 03:58:57,614 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:00:12,498 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:02:06,628 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:02:09,390 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:02:09,419 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4379
+INFO 2025-01-16 04:02:18,893 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:02:18,965 basehttp "GET /admin/ HTTP/1.1" 200 14573
+INFO 2025-01-16 04:02:22,030 basehttp "GET /admin/auth/group/add/ HTTP/1.1" 200 16700
+INFO 2025-01-16 04:02:22,141 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:03:00,336 basehttp "POST /admin/auth/group/add/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:03:00,420 basehttp "GET /admin/auth/group/ HTTP/1.1" 200 12575
+INFO 2025-01-16 04:03:00,523 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:05:04,124 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:05:05,893 basehttp "GET /admin/auth/group/1/change/ HTTP/1.1" 200 17016
+INFO 2025-01-16 04:05:06,035 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:05:13,198 basehttp "GET /admin/auth/group/ HTTP/1.1" 200 12365
+INFO 2025-01-16 04:52:19,713 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:52:22,131 basehttp "GET /admin/app_0/customuser/ HTTP/1.1" 200 16793
+INFO 2025-01-16 04:52:22,290 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:53:07,235 basehttp "GET /admin/app_0/customuser/9/change/ HTTP/1.1" 200 30788
+INFO 2025-01-16 04:53:07,333 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:53:19,427 basehttp "POST /admin/app_0/customuser/9/change/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:53:19,495 basehttp "GET /admin/app_0/customuser/ HTTP/1.1" 200 16994
+INFO 2025-01-16 04:53:19,597 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:53:21,530 basehttp "GET /admin/app_0/customuser/1/change/ HTTP/1.1" 200 30824
+INFO 2025-01-16 04:53:21,629 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-16 04:53:27,581 basehttp "POST /admin/app_0/customuser/1/change/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:53:27,651 basehttp "GET /admin/app_0/customuser/ HTTP/1.1" 200 16994
+INFO 2025-01-16 04:53:27,752 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-01-16 04:53:37,052 log Not Found: /app_0
+WARNING 2025-01-16 04:53:37,053 basehttp "GET /app_0 HTTP/1.1" 404 2513
+INFO 2025-01-16 04:53:43,390 basehttp "GET /index HTTP/1.1" 301 0
+INFO 2025-01-16 04:53:43,705 basehttp "GET /index/ HTTP/1.1" 200 40
+WARNING 2025-01-16 04:53:49,426 log Not Found: /index/ceva
+WARNING 2025-01-16 04:53:49,427 basehttp "GET /index/ceva HTTP/1.1" 404 6750
+INFO 2025-01-16 04:54:01,095 basehttp "GET /index/adauga-bilet HTTP/1.1" 301 0
+INFO 2025-01-16 04:54:01,165 basehttp "GET /index/adauga-bilet/ HTTP/1.1" 200 1797
+INFO 2025-01-16 04:54:08,568 basehttp "POST /index/adauga-bilet/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:54:08,574 basehttp "GET /index/adauga-bilet/success/ HTTP/1.1" 200 191
+INFO 2025-01-16 04:54:33,519 basehttp "GET /index/profile/ HTTP/1.1" 200 745
+INFO 2025-01-16 04:54:37,751 basehttp "GET /index/logout/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:54:37,758 basehttp "GET /index/login/ HTTP/1.1" 200 865
+INFO 2025-01-16 04:54:49,239 basehttp "POST /index/login/ HTTP/1.1" 302 0
+INFO 2025-01-16 04:54:49,299 basehttp "GET /index/profile/ HTTP/1.1" 200 791
+INFO 2025-01-16 04:54:52,537 log Forbidden (Permission denied): /index/adauga-bilet/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 57, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 130, in check_perms
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+INFO 2025-01-16 04:54:52,541 basehttp "GET /index/adauga-bilet/ HTTP/1.1" 200 171
+INFO 2025-01-16 04:58:56,282 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 04:58:56,747 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:59:08,375 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 04:59:08,803 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 04:59:27,548 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 04:59:27,987 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:02:36,221 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\urls.py changed, reloading.
+INFO 2025-01-16 05:02:36,659 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:03:04,625 basehttp "GET /index/bilete/ HTTP/1.1" 200 6323
+INFO 2025-01-16 05:03:10,079 basehttp "GET /index/bilete/ HTTP/1.1" 200 6323
+INFO 2025-01-16 05:03:10,683 basehttp "GET /index/bilete/ HTTP/1.1" 200 6323
+INFO 2025-01-16 05:03:11,981 basehttp "GET /index/bilete/ HTTP/1.1" 200 6323
+INFO 2025-01-16 05:04:21,609 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:04:22,439 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:04:24,993 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:04:25,574 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:04:28,798 basehttp "GET /index/bilet/4/ HTTP/1.1" 200 726
+INFO 2025-01-16 05:04:56,641 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:04:57,201 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:04:57,744 basehttp "GET /index/bilete/ HTTP/1.1" 200 6295
+INFO 2025-01-16 05:05:10,231 basehttp "GET /index/bilete/ HTTP/1.1" 200 6298
+ERROR 2025-01-16 05:05:13,789 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:13,791 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:15,390 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:15,392 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:16,426 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:16,428 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:16,608 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:16,610 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:17,115 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:17,117 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:17,463 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:17,464 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:17,901 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:17,903 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:05:18,477 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:05:18,479 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:07:03,152 basehttp "GET /index/bilete/ HTTP/1.1" 200 6360
+ERROR 2025-01-16 05:07:05,110 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 282, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:07:05,112 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:07:21,519 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:07:21,963 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:07:31,539 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:07:31,978 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:07:42,577 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\urls.py changed, reloading.
+INFO 2025-01-16 05:07:42,995 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:08:24,204 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:08:24,622 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:08:27,572 basehttp "GET /index/bilete/ HTTP/1.1" 200 6360
+ERROR 2025-01-16 05:08:29,260 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:08:29,262 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:08:29,839 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:08:29,841 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:08:30,312 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:08:30,313 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:08:35,155 basehttp "GET /index/oferta HTTP/1.1" 301 0
+WARNING 2025-01-16 05:08:35,220 log Forbidden: /index/oferta/
+WARNING 2025-01-16 05:08:35,221 basehttp "GET /index/oferta/ HTTP/1.1" 403 218
+ERROR 2025-01-16 05:08:46,889 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:08:46,891 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+WARNING 2025-01-16 05:09:02,351 log Not Found: /index/adauga-oferta
+WARNING 2025-01-16 05:09:02,351 basehttp "GET /index/adauga-oferta HTTP/1.1" 404 7333
+INFO 2025-01-16 05:09:12,638 basehttp "GET /index/assign_offer_permission HTTP/1.1" 301 0
+WARNING 2025-01-16 05:09:13,018 log Bad Request: /index/assign_offer_permission/
+WARNING 2025-01-16 05:09:13,018 basehttp "GET /index/assign_offer_permission/ HTTP/1.1" 400 19
+INFO 2025-01-16 05:10:56,496 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:10:56,953 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:11:24,896 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:11:25,329 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-16 05:11:25,898 log Not Found: /index/adauga-oferta
+WARNING 2025-01-16 05:11:25,899 basehttp "GET /index/adauga-oferta HTTP/1.1" 404 7333
+INFO 2025-01-16 05:11:34,944 basehttp "GET /index/bilete/ HTTP/1.1" 200 6225
+ERROR 2025-01-16 05:11:36,298 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:11:36,300 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:11:36,810 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:11:36,811 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:11:37,390 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:11:37,392 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:11:38,056 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:11:38,057 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:11:39,789 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:11:39,790 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:12:33,799 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:34,388 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:34,953 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:35,478 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:35,947 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:37,267 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:38,264 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:40,272 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:41,013 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:41,525 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:41,693 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:42,075 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:42,396 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:42,811 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:43,261 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:45,714 basehttp "GET /index/bilete/ HTTP/1.1" 200 6409
+INFO 2025-01-16 05:12:53,848 basehttp "GET /index/bilete/ HTTP/1.1" 200 6407
+INFO 2025-01-16 05:12:55,162 basehttp "GET /index/bilete/ HTTP/1.1" 200 6407
+INFO 2025-01-16 05:12:59,800 basehttp "GET /index/bilete/ HTTP/1.1" 200 6411
+ERROR 2025-01-16 05:13:16,907 log Internal Server Error: /index/bilete/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 57, in lista_bilete
+    return render(request, 'app_0/lista_bilete.html', {'form': form, 'page_obj': page_obj})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'oferta.html' not found. 'oferta.html' is not a valid view function or pattern name.
+ERROR 2025-01-16 05:13:20,078 basehttp "GET /index/bilete/ HTTP/1.1" 500 136761
+INFO 2025-01-16 05:13:52,848 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:13:53,187 basehttp "GET /index/bilete/ HTTP/1.1" 200 6238
+INFO 2025-01-16 05:13:54,309 basehttp "GET /index/bilete/ HTTP/1.1" 200 6238
+INFO 2025-01-16 05:13:59,147 basehttp "GET /index/bilete/ HTTP/1.1" 200 6236
+ERROR 2025-01-16 05:14:01,100 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:14:01,101 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:14:01,685 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:14:01,687 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:14:02,635 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:14:02,636 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:14:02,778 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:14:02,780 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:15:45,246 basehttp "GET /index/bilete/ HTTP/1.1" 200 6221
+ERROR 2025-01-16 05:15:47,385 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:15:47,387 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+ERROR 2025-01-16 05:15:47,955 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:15:47,956 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:15:55,029 basehttp "GET /index/bilete/ HTTP/1.1" 200 6227
+ERROR 2025-01-16 05:15:56,791 log Internal Server Error: /index/assign_offer_permission/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 283, in assign_offer_permission
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Permission.DoesNotExist: Permission matching query does not exist.
+ERROR 2025-01-16 05:15:56,793 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 500 84370
+INFO 2025-01-16 05:16:04,366 basehttp "GET /index/bilete/ HTTP/1.1" 200 6227
+INFO 2025-01-16 05:16:12,517 basehttp "GET /index/bilete/ HTTP/1.1" 200 6221
+INFO 2025-01-16 05:16:20,160 basehttp "GET /index/bilete/ HTTP/1.1" 200 6226
+INFO 2025-01-16 05:16:29,441 basehttp "GET /index/bilete/ HTTP/1.1" 200 6225
+INFO 2025-01-16 05:16:51,048 basehttp "GET /index/bilete/ HTTP/1.1" 200 6224
+INFO 2025-01-16 05:17:25,904 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:17:26,372 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:17:34,919 autoreload C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py changed, reloading.
+INFO 2025-01-16 05:17:35,364 autoreload Watching for file changes with StatReloader
+INFO 2025-01-16 05:17:37,950 basehttp "GET /index/bilete/ HTTP/1.1" 200 6224
+WARNING 2025-01-16 05:17:39,694 log Bad Request: /index/assign_offer_permission/
+WARNING 2025-01-16 05:17:39,695 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 400 59
+WARNING 2025-01-16 05:17:40,317 log Bad Request: /index/assign_offer_permission/
+WARNING 2025-01-16 05:17:40,319 basehttp "POST /index/assign_offer_permission/ HTTP/1.1" 400 59
+WARNING 2025-01-16 05:17:43,263 log Forbidden: /index/oferta/
+WARNING 2025-01-16 05:17:43,264 basehttp "GET /index/oferta/ HTTP/1.1" 403 218

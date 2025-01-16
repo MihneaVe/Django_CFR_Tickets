@@ -2,6 +2,11 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import Promotie, Tren, Vagon, Statie, Ruta, Cursa, Bilet, CustomUser, Vizualizare
 
+# Customizing the admin site
+admin.site.site_header = "Administrație Trenuri"
+admin.site.site_title = "Administrație Trenuri"
+admin.site.index_title = "Bine ați venit la Administrația Trenuri"
+
 # Customizing the admin interface for the Tren model
 @admin.register(Tren)
 class TrenAdmin(admin.ModelAdmin):
@@ -52,13 +57,6 @@ class BiletAdmin(admin.ModelAdmin):
     search_fields = ('loc',)
     list_filter = ('pret', 'vagon', 'cursa')
 
-# Customizing the admin site
-admin.site.site_header = "Administrație Trenuri"
-admin.site.site_title = "Administrație Trenuri"
-admin.site.index_title = "Bine ați venit la Administrația Trenuri"
-
-admin.site.register(CustomUser, UserAdmin)
-
 @admin.register(Promotie)
 class PromotieAdmin(admin.ModelAdmin):
     list_display = ('nume', 'data_creare', 'data_expirare', 'subiect')
@@ -71,5 +69,45 @@ class VizualizareAdmin(admin.ModelAdmin):
     search_fields = ('user__username', 'produs__nume')
     list_filter = ('data_vizualizare',)
 
+
+class CustomUserAdmin(UserAdmin):
+    fieldsets = (
+        *UserAdmin.fieldsets,
+        (
+            'Additional Info',
+            {
+                'fields': (
+                    'phone_number',
+                    'address',
+                    'birth_date',
+                    'profile_picture',
+                    'bio',
+                    'email_confirmat',
+                ),
+            },
+        ),
+    )
+    add_fieldsets = (
+        *UserAdmin.add_fieldsets,
+        (
+            'Additional Info',
+            {
+                'fields': (
+                    'phone_number',
+                    'address',
+                    'birth_date',
+                    'profile_picture',
+                    'bio',
+                ),
+            },
+        ),
+    )
+
+try:
+    admin.site.unregister(CustomUser)
+except admin.sites.NotRegistered:
+    pass
+
+admin.site.register(CustomUser, CustomUserAdmin)
 #User - mihnea
 #Pass - 1234

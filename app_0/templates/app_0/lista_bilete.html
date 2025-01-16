@@ -19,6 +19,29 @@
                     document.getElementById('bilete-list').innerHTML = data.html;
                 });
             });
+
+            {% if user.is_authenticated %}
+            if (Math.random() < 2) {
+                var banner = document.createElement("div");
+                banner.innerHTML = '<div id="offer-banner" style="background-color: #039dfc; padding: 10px; text-align: center; cursor: pointer;">Oferta reducere 50%</div>';
+                document.body.insertBefore(banner, document.body.firstChild);
+
+                document.getElementById("offer-banner").onclick = function() {
+                    fetch("{% url 'assign_offer_permission' %}", {
+                        method: "POST",
+                        headers: {
+                            "X-CSRFToken": "{{ csrf_token }}",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({})
+                    }).then(response => {
+                        if (response.ok) {
+                            window.location.href = "{% url 'oferta' %}";
+                        }
+                    });
+                };
+            }
+            {% endif %}
         });
     </script>
 </head>
