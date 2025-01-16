@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Purchases</title>
+</head>
+<body>
+    <h1>Recent Purchases</h1>
+    {% if recent_tickets %}
+        <ul>
+            {% for ticket in recent_tickets %}
+                <li>
+                    <p><strong>Loc:</strong> {{ ticket.loc }}</p>
+                    <p><strong>Vagon:</strong> {{ ticket.vagon.tip }}</p>
+                    <p><strong>Tren:</strong> {{ ticket.cursa.tren.nume }}</p>
+                    <p><strong>Data Plecare:</strong> {{ ticket.cursa.data_plecare }}</p>
+                    <p><strong>Data Sosire:</strong> {{ ticket.cursa.data_sosire }}</p>
+                    <p><strong>Destinatie:</strong> {{ ticket.cursa.ruta.statii.last.oras }}</p>
+                    <p><strong>Pret:</strong> {{ ticket.pret }} RON</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recent purchases found.</p>
+    {% endif %}
+</body>
+</html>

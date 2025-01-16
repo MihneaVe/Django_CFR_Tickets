@@ -1,0 +1,3 @@
+CRITICAL 2025-01-16 02:10:23,377 views Attempt to register with username 'admin' from email: mihneave2004@gmail.com
+CRITICAL 2025-01-16 02:10:48,526 views Attempt to register with username 'admin' from email: mihneave2004@gmail.com
+CRITICAL 2025-01-16 02:14:24,191 views An error occurred: Cannot resolve keyword 'user' into field. Choices are: cursa, cursa_id, id, loc, pret, vagon, vagon_id, vizualizare

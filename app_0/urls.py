@@ -19,4 +19,6 @@ urlpatterns = [
     # path('promotii/', views.promotii, name='promotii'),
     # path('promotii/success/', views.promotii_success, name='promotii_success'),
     path('bilet/<int:bilet_id>/', views.bilet_detail, name='bilet_detail'),
+    path('recent_purchases/', views.recent_purchases, name='recent_purchases'),
+    path('test_403/', views.test_403, name='test_403'),
 ]

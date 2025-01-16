@@ -1,0 +1,203 @@
+ERROR 2025-01-16 02:08:02,670 views Login failed for username: Velcq
+ERROR 2025-01-16 02:08:04,914 views Login failed for username: Velcq
+ERROR 2025-01-16 02:08:06,869 views Login failed for username: Velcq
+ERROR 2025-01-16 02:08:10,162 views Login failed for username: Velcq
+ERROR 2025-01-16 02:08:50,592 log Internal Server Error: /index/register/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 103, in register
+    messages.error(request, 'This username is not allowed.')
+    ^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'error'
+ERROR 2025-01-16 02:08:50,594 basehttp "POST /index/register/ HTTP/1.1" 500 72624
+CRITICAL 2025-01-16 02:10:23,377 views Attempt to register with username 'admin' from email: mihneave2004@gmail.com
+CRITICAL 2025-01-16 02:10:48,526 views Attempt to register with username 'admin' from email: mihneave2004@gmail.com
+ERROR 2025-01-16 02:12:40,584 views Login failed for username: Velcq
+CRITICAL 2025-01-16 02:14:24,191 views An error occurred: Cannot resolve keyword 'user' into field. Choices are: cursa, cursa_id, id, loc, pret, vagon, vagon_id, vizualizare
+ERROR 2025-01-16 02:14:24,191 log Internal Server Error: /index/recent_purchases/
+ERROR 2025-01-16 02:14:24,192 basehttp "GET /index/recent_purchases/ HTTP/1.1" 500 18
+ERROR 2025-01-16 02:25:29,096 log Internal Server Error: /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: custom_403_view() missing 1 required positional argument: 'exception'
+ERROR 2025-01-16 02:25:29,097 basehttp "GET /index/test_403/ HTTP/1.1" 500 65677
+ERROR 2025-01-16 02:27:06,166 log Internal Server Error: /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: custom_403_view() missing 1 required positional argument: 'exception'
+ERROR 2025-01-16 02:27:06,167 basehttp "GET /index/test_403/ HTTP/1.1" 500 65677
+ERROR 2025-01-16 02:27:50,405 log Internal Server Error: /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: custom_403_view() missing 1 required positional argument: 'exception'
+ERROR 2025-01-16 02:27:50,407 basehttp "GET /index/test_403/ HTTP/1.1" 500 65677
+ERROR 2025-01-16 02:27:51,450 log Internal Server Error: /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: custom_403_view() missing 1 required positional argument: 'exception'
+ERROR 2025-01-16 02:27:51,451 basehttp "GET /index/test_403/ HTTP/1.1" 500 65677
+ERROR 2025-01-16 02:29:09,101 log Internal Server Error: /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: custom_403_view() missing 1 required positional argument: 'exception'
+ERROR 2025-01-16 02:29:09,102 basehttp "GET /index/test_403/ HTTP/1.1" 500 65677
+ERROR 2025-01-16 02:29:11,100 log Internal Server Error: /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: custom_403_view() missing 1 required positional argument: 'exception'
+ERROR 2025-01-16 02:29:11,101 basehttp "GET /index/test_403/ HTTP/1.1" 500 65677
+ERROR 2025-01-16 02:29:48,975 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:29:48,976 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:18,763 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:18,764 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:31,150 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:31,151 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:32,500 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:32,502 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:33,417 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:33,418 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:46,842 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:46,843 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:47,626 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:47,628 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:48,119 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:48,120 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:30:48,416 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:30:48,417 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508
+ERROR 2025-01-16 02:32:04,073 log Forbidden (Permission denied): /index/test_403/
+Traceback (most recent call last):
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mihnea\Documents\Unibuc-FMI\2024-2025\Semestrul_1\Django\proiect\app_0\views.py", line 267, in test_403
+    raise PermissionDenied("You do not have permission to access this resource.")
+django.core.exceptions.PermissionDenied: You do not have permission to access this resource.
+ERROR 2025-01-16 02:32:04,075 basehttp "GET /index/test_403/ HTTP/1.1" 500 92508

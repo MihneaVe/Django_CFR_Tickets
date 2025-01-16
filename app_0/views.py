@@ -1,5 +1,6 @@
 from datetime import timedelta
-from pyexpat.errors import messages
+import logging
+from django.contrib import messages
 from django.core.paginator import Paginator
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
@@ -12,6 +13,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.core.mail import send_mass_mail, mail_admins
 from app_0 import models
 from django.utils import timezone
+from django.core.exceptions import PermissionDenied
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -94,8 +96,19 @@ def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST, request.FILES)
         if form.is_valid():
+            if form.cleaned_data['username'].lower() == 'admin':
+                subject = "cineva incearca sa ne preia site-ul"
+                message = f"Email: {form.cleaned_data['email']}"
+                html_message = f"<h1 style='color:red;'>cineva incearca sa ne preia site-ul</h1><p>Email: {form.cleaned_data['email']}</p>"
+                mail_admins(subject, message, html_message=html_message)
+                messages.error(request, 'This username is not allowed.')
+                logger.critical(f"Attempt to register with username 'admin' from email: {form.cleaned_data['email']}")
+                return redirect('register')
             form.save()
+            logger.info(f"New user registered: {form.cleaned_data['username']}")
             return redirect('login')
+        else:
+            logger.error("User registration failed.")
     else:
         form = CustomUserCreationForm()
     return render(request, 'app_0/register.html', {'form': form})
@@ -103,6 +116,8 @@ def register(request):
 # LAB 6 TASK 3
 
 login_attempts = {}
+
+logger = logging.getLogger('django')
 
 def custom_login(request):
     if request.method == 'POST':
@@ -124,18 +139,23 @@ def custom_login(request):
             html_message = f"<h1 style='color:red;'>Logari suspecte</h1><p>Username: {username}</p><p>IP Address: {ip_address}</p>"
             mail_admins(subject, message, html_message=html_message)
             login_attempts[username] = []  # Reset attempts after sending email
+            logger.warning(f"Suspicious login attempts for username: {username} from IP: {ip_address}")
 
         if form.is_valid():
             user = form.get_user()
             if not user.email_confirmat:
                 messages.error(request, 'Please confirm your email address before logging in.')
+                logger.info(f"User {username} attempted to log in without confirming email.")
                 return redirect('login')
             login(request, user)
             if form.cleaned_data.get('remember_me'):
                 request.session.set_expiry(86400)  # 1 day
             else:
                 request.session.set_expiry(0)  # Browser close
+            logger.debug(f"User {username} logged in successfully.")
             return redirect('profile')
+        else:
+            logger.error(f"Login failed for username: {username}")
     else:
         form = CustomAuthenticationForm()
     return render(request, 'app_0/login.html', {'form': form})
@@ -212,3 +232,36 @@ def bilet_detail(request, bilet_id):
         adauga_vizualizare(request.user, bilet)
     
     return render(request, 'app_0/bilet_detail.html', {'bilet': bilet})
+
+def recent_purchases(request):
+    try:
+        logger.debug("Starting recent_purchases view.")
+        
+        # Fetch recent purchases for the logged-in user
+        recent_tickets = Bilet.objects.filter(user=request.user).order_by('-purchase_date')[:10]
+        logger.info(f"Fetched recent purchases for user: {request.user.username}")
+        
+        # Check if there are any recent purchases
+        if not recent_tickets:
+            logger.warning(f"No recent purchases found for user: {request.user.username}")
+        
+        return render(request, 'app_0/recent_purchases.html', {'recent_tickets': recent_tickets})
+    
+    except Exception as e:
+        subject = "An error occurred in recent_purchases view"
+        message = str(e)
+        html_message = f"<p style='background-color:red;'>{str(e)}</p>"
+        mail_admins(subject, message, html_message=html_message)
+        logger.critical(f"An error occurred: {str(e)}")
+        return HttpResponse("An error occurred.", status=500)
+    
+
+def custom_403_view(request, exception):
+    context = {
+        'titlu': 'Acces Interzis',
+        'mesaj_personalizat': str(exception)
+    }
+    return render(request, '403.html', context)
+
+def test_403(request):
+    raise PermissionDenied("You do not have permission to access this resource.")

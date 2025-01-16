@@ -4,7 +4,7 @@
     <title>Confirm your email address</title>
 </head>
 <body>
-    <h1>Welcome to our site, {{ user.first_name }} {{ user.last_name }}!</h1>
+    <h1>Welcome to our site, {{ user.username }}!</h1>
     <p>Thank you for registering on our site. Please confirm your email address by clicking the link below:</p>
     <p><a href="{{ confirmation_url }}">Confirm your email address</a></p>
     <p>Username: {{ user.username }}</p>
