@@ -1,0 +1,17 @@
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'lista_bilete' %}">Lista Bilete</a></li>
+        <li><a href="{% url 'cart_page' %}">Cart</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'adauga_bilet' %}">Adauga Bilet</a></li>
+            <li><a href="{% url 'oferta' %}">Oferta</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+    </ul>
+</nav>

@@ -1,7 +1,25 @@
+{% extends 'app_0/base.html' %}
+
+{% block title %}Lista Bilete{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Lista Bilete</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .main-content {
+            flex: 3;
+        }
+        .cart-sidebar {
+            flex: 1;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('filter-form');
@@ -21,7 +39,7 @@
             });
 
             {% if user.is_authenticated %}
-            if (Math.random() < 2) {
+            if (Math.random() < 0.3) {
                 var banner = document.createElement("div");
                 banner.innerHTML = '<div id="offer-banner" style="background-color: #039dfc; padding: 10px; text-align: center; cursor: pointer;">Oferta reducere 50%</div>';
                 document.body.insertBefore(banner, document.body.firstChild);
@@ -43,20 +61,110 @@
             }
             {% endif %}
         });
+        function addToCart(biletId) {
+            fetch(`/index/add_to_cart/${biletId}/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ quantity: 1 })
+            }).then(response => response.json()).then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    updateCartSidebar();
+                    updateCartPage();
+                } else {
+                    alert(data.message);
+                }
+            }).catch(error => console.error('Error:', error));
+        }
+        
+        function removeFromCart(biletId) {
+            fetch(`/index/remove_from_cart/${biletId}/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                }
+            }).then(response => response.json()).then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    updateCartSidebar();
+                    updateCartPage();
+                } else {
+                    alert(data.message);
+                }
+            }).catch(error => console.error('Error:', error));
+        }
+        
+        function updateCart(biletId, quantity) {
+            fetch(`/index/update_cart/${biletId}/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ quantity: quantity })
+            }).then(response => response.json()).then(data => {
+                if (data.status === 'success') {
+                    alert(data.message);
+                    updateCartSidebar();
+                    updateCartPage();
+                } else {
+                    alert(data.message);
+                }
+            }).catch(error => console.error('Error:', error));
+        }
+        
+        function updateCartSidebar() {
+            fetch(`/index/view_cart/`, {
+                method: "GET",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                }
+            }).then(response => response.json()).then(data => {
+                document.getElementById('cart-sidebar').innerHTML = data.html;
+            }).catch(error => console.error('Error:', error));
+        }
+        
+        function updateCartPage() {
+            fetch(`/index/cart/`, {
+                method: "GET",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                }
+            }).then(response => response.json()).then(data => {
+                document.getElementById('cart-page').innerHTML = data.html;
+            }).catch(error => console.error('Error:', error));
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartSidebar();
+            updateCartPage();
+        });
     </script>
 </head>
 <body>
-    <h1>Lista Bilete</h1>
-
-    <!-- Filter form -->
-    <form id="filter-form" method="get">
-        {{ form.as_p }}
-        <button type="submit">Filtreaza</button>
-    </form>
-
-    <!-- Bilete list -->
-    <div id="bilete-list">
-        {% include 'app_0/bilete_list.html' %}
+    <div class="container">
+        <div class="main-content">
+            <h1>Lista Bilete</h1>
+            <!-- Filter form -->
+            <form id="filter-form" method="get">
+                {{ form.as_p }}
+                <button type="submit">Filtreaza</button>
+            </form>
+            <!-- Bilete list -->
+            <div id="bilete-list">
+                {% include 'app_0/bilete_list.html' %}
+            </div>
+        </div>
+        <div class="cart-sidebar" id="cart-sidebar">
+            <!-- Cart contents will be loaded here -->
+        </div>
     </div>
 </body>
 </html>
+{% endblock %}

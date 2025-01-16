@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}CFR - Calatori{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app_0/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Change the font */
+            background-image: url('/static/app_0/bgr.jpg'); /* Add a background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+        }
+        
+        .container {
+            display: flex;
+            margin: 20px;
+            width: 80%;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .main-content, .cart-sidebar {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+        
+        .cart-sidebar {
+            flex: 1;
+        }
+        
+        header {
+            width: 100%;
+            background-color: #039dfc; /* Light blue color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        footer {
+            width: 100%;
+            background-color: #039dfc; /* Light blue color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        nav ul li {
+            display: inline;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #039dfc;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        nav ul li a:hover {
+            background-color: #027bb5;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        button {
+            background-color: #039dfc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #027bb5;
+        }
+        
+        /* Profile styles */
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .profile-picture {
+            flex: 0 0 150px;
+            margin-left: 20px;
+        }
+        
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logout-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #039dfc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        .logout-button:hover {
+            background-color: #027bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CFR - Calatori</h1>
+        {% include 'app_0/menu.html' %}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Velcea Mihnea-Andrei</p>
+    </footer>
+</body>
+</html>

@@ -8,8 +8,6 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 import uuid
 
-# TASK 1 LAB 5
-
 
 class BiletFilterForm(forms.Form):
     tren_nume = forms.CharField(required=False, label='Nume Tren')
@@ -132,10 +130,6 @@ class ContactForm(forms.Form):
             
 
 
-
-
-
-# LAB 5 TASK 2
 
 
 

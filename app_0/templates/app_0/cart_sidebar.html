@@ -1,0 +1,23 @@
+<div>
+    <h2>Cart</h2>
+    <ul>
+        {% for item in cart_items %}
+        <li>
+            <p><strong>Loc:</strong> {{ item.bilet.loc }}</p>
+            <p><strong>Vagon:</strong> {{ item.bilet.vagon.tip }}</p>
+            <p><strong>Tren:</strong> {{ item.bilet.cursa.tren.nume }}</p>
+            <p><strong>Data Plecare:</strong> {{ item.bilet.cursa.data_plecare }}</p>
+            <p><strong>Data Sosire:</strong> {{ item.bilet.cursa.data_sosire }}</p>
+            <p><strong>Destinatie:</strong> {{ item.bilet.cursa.ruta.statii.last.oras }}</p>
+            <p><strong>Pret:</strong> {{ item.bilet.pret }} RON</p>
+            <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+            <p><strong>Total Price:</strong> {{ item.total_price }} RON</p>
+            <button onclick="updateCart({{ item.bilet.id }}, {{ item.quantity }} + 1)">+</button>
+            <button onclick="updateCart({{ item.bilet.id }}, {{ item.quantity }} - 1)">-</button>
+            <button onclick="removeFromCart({{ item.bilet.id }})">Remove</button>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><strong>Total Quantity:</strong> {{ total_quantity }}</p>
+    <p><strong>Total Price:</strong> {{ total_price }} RON</p>
+</div>

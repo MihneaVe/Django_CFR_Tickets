@@ -23,4 +23,9 @@ urlpatterns = [
     path('test_403/', views.test_403, name='test_403'),
     path('assign_offer_permission/', views.assign_offer_permission, name='assign_offer_permission'),
     path('oferta/', views.oferta, name='oferta'),
+    path('add_to_cart/<int:bilet_id>/', views.add_to_cart, name='add_to_cart'),
+    path('remove_from_cart/<int:bilet_id>/', views.remove_from_cart, name='remove_from_cart'),
+    path('update_cart/<int:bilet_id>/', views.update_cart, name='update_cart'),
+    path('view_cart/', views.view_cart, name='view_cart'),
+    path('cart/', views.cart_page, name='cart_page'),
 ]

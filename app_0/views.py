@@ -18,7 +18,7 @@ from django.contrib.auth.decorators import permission_required
 from django.contrib.auth.models import Permission
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, 'app_0/home.html')
 
 def lista_bilete(request):
     form = BiletFilterForm(request.GET)
@@ -172,7 +172,12 @@ def custom_login(request):
 
 @login_required
 def custom_logout(request):
-    request.user.user_permissions.remove(Permission.objects.get(codename='vizualizeaza_oferta'))
+    try:
+        permission = Permission.objects.get(codename='vizualizeaza_oferta')
+        if request.user.has_perm('app_0.vizualizeaza_oferta'):
+            request.user.user_permissions.remove(permission)
+    except Permission.DoesNotExist:
+        pass  # Handle the case where the permission does not exist
     logout(request)
     return redirect('login')
 
@@ -279,16 +284,9 @@ def test_403(request):
 
 @login_required
 def assign_offer_permission(request):
-    if request.method == "POST":
-        try:
-            permission = Permission.objects.get(codename='vizualizeaza_oferta')
-            request.user.user_permissions.add(permission)
-            return JsonResponse({"status": "success"})
-        except Permission.DoesNotExist:
-            return JsonResponse({"status": "error", "message": "Permission does not exist"}, status=400)
-    return JsonResponse({"status": "error", "message": "Invalid request method"}, status=400)
-
-from django.http import HttpResponseForbidden
+    permission = Permission.objects.get(codename='vizualizeaza_oferta')
+    request.user.user_permissions.add(permission)
+    return redirect('oferta_view')
 
 @login_required
 def oferta(request):
@@ -299,3 +297,90 @@ def oferta(request):
         }
         return render(request, 'app_0/403.html', context, status=403)
     return render(request, 'app_0/oferta.html')
+
+    
+@login_required
+def view_cart(request):
+    cart = request.session.get('cart', {})
+    cart_items = []
+    total_price = 0
+    total_quantity = 0
+
+    for bilet_id, quantity in cart.items():
+        bilet = get_object_or_404(Bilet, id=bilet_id)
+        total_price += bilet.pret * quantity
+        total_quantity += quantity
+        cart_items.append({
+            'bilet': bilet,
+            'quantity': quantity,
+            'total_price': bilet.pret * quantity
+        })
+
+    html = render_to_string('app_0/cart_sidebar.html', {
+        'cart_items': cart_items,
+        'total_price': total_price,
+        'total_quantity': total_quantity
+    })
+
+    return JsonResponse({'html': html}, content_type='application/json')
+    
+@login_required
+def cart_page(request):
+    cart = request.session.get('cart', {})
+    cart_items = []
+    total_price = 0
+    total_quantity = 0
+
+    for bilet_id, quantity in cart.items():
+        bilet = get_object_or_404(Bilet, id=bilet_id)
+        total_price += bilet.pret * quantity
+        total_quantity += quantity
+        cart_items.append({
+            'bilet': bilet,
+            'quantity': quantity,
+            'total_price': bilet.pret * quantity
+        })
+
+    context = {
+        'cart_items': cart_items,
+        'total_price': total_price,
+        'total_quantity': total_quantity
+    }
+
+    return render(request, 'app_0/cart_page.html', context)
+
+def add_to_cart(request, bilet_id):
+    cart = request.session.get('cart', {})
+    quantity = int(request.POST.get('quantity', 1))
+    bilet = get_object_or_404(Bilet, id=bilet_id)
+
+    if bilet.available_stock >= quantity:
+        if bilet_id in cart:
+            cart[bilet_id] += quantity
+        else:
+            cart[bilet_id] = quantity
+        request.session['cart'] = cart
+        return JsonResponse({'status': 'success', 'message': 'Product added to cart'})
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Not enough stock available'})
+
+def update_cart(request, bilet_id):
+    cart = request.session.get('cart', {})
+    quantity = int(request.POST.get('quantity', 1))
+    bilet = get_object_or_404(Bilet, id=bilet_id)
+
+    if bilet.available_stock >= quantity:
+        cart[bilet_id] = quantity
+        request.session['cart'] = cart
+        return JsonResponse({'status': 'success', 'message': 'Cart updated'})
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Not enough stock available'})
+
+def remove_from_cart(request, bilet_id):
+    cart = request.session.get('cart', {})
+    if bilet_id in cart:
+        del cart[bilet_id]
+        request.session['cart'] = cart
+        return JsonResponse({'status': 'success', 'message': 'Product removed from cart'})
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Product not in cart'})

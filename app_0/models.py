@@ -50,6 +50,12 @@ class Bilet(models.Model):
 
     def __str__(self):
         return f"Bilet pentru locul {self.loc} - Cursa: {self.cursa}"
+    
+    @property
+    def available_stock(self):
+        total_seats = self.vagon.numar_locuri
+        sold_tickets = Bilet.objects.filter(vagon=self.vagon, cursa=self.cursa).count()
+        return total_seats - sold_tickets
 
     @property
     def tren(self):
@@ -70,6 +76,11 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+    
+    class Meta:
+        permissions = [
+            ("vizualizeaza_oferta", "Can view offer"),
+        ]
     
 class Vizualizare(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)

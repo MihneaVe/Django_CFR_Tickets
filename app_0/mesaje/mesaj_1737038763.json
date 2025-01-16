@@ -1,0 +1,11 @@
+{
+    "nume": "Serban",
+    "prenume": "Luca",
+    "data_nasterii": "2005-08-15",
+    "email": "mihnea-andrei.velcea@s.unibuc.ro",
+    "tip_mesaj": "cerere",
+    "subiect": "Am nevoie de help",
+    "minim_zile_asteptare": 5000,
+    "mesaj": "Daca va rog frumos, mergeti pt mine la examene? Luca Serban",
+    "varsta": "18 ani si 5 luni"
+}

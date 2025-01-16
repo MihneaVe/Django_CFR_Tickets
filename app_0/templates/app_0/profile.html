@@ -1,30 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Profile</title>
-    <style>
-        .profile-picture {
-            width: 5vw; /* 5% of the viewport width */
-            height: 5vw; /* 5% of the viewport width to make it a square */
-            object-fit: cover; /* Ensure the image covers the area without distortion */
-            border-radius: 50%; /* Make it a circle */
-        }
-    </style>
-</head>
-<body>
-    <h1>Profile</h1>
-    <p>Username: {{ request.user.username }}</p>
-    <p>Email: {{ request.user.email }}</p>
-    <p>Phone Number: {{ request.user.phone_number }}</p>
-    <p>Address: {{ request.user.address }}</p>
-    <p>Birth Date: {{ request.user.birth_date }}</p>
-    <p>Bio: {{ request.user.bio }}</p>
-    {% if request.user.profile_picture %}
-        <p><img src="{{ request.user.profile_picture.url }}" alt="Profile Picture" class="profile-picture"></p>
-    {% else %}
-        <p>No profile picture available.</p>
-    {% endif %}
-    <a href="{% url 'change_password' %}">Change Password</a>
-    <a href="{% url 'logout' %}">Logout</a>
-</body>
-</html>
+<!-- filepath: /c:/Users/Mihnea/Documents/Unibuc-FMI/2024-2025/Semestrul_1/Django/proiect/app_0/templates/app_0/profile.html -->
+{% extends 'app_0/base.html' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="main-content">
+        <h1>Profil</h1>
+        <div class="profile-container">
+            <div class="profile-info">
+                <p><strong>Username:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>Telefon:</strong> {{ user.phone_number }}</p>
+                <p><strong>Adresa:</strong> {{ user.address }}</p>
+                <p><strong>Data nașterii:</strong> {{ user.birth_date }}</p>
+                <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+                <a href="{% url 'change_password' %}" class="logout-button">Schimbă Parola</a>
+            </div>
+            <div class="profile-picture">
+                {% if user.profile_picture %}
+                    <img src="{{ user.profile_picture.url }}" alt="Profile Picture">
+                {% else %}
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSuJLHJ_34kj_XR6Fuf8pzSwEMODY3JtG2Xg&s" alt="Default Profile Picture">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
